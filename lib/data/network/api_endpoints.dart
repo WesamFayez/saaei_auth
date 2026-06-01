@@ -43,4 +43,31 @@ class APIEndpoints {
       },
     );
   }
+
+  static Endpoint<User> resetPassword({required String phone}) {
+    return Endpoint<User>(
+      path: "api/v1/sendCode-phone",
+      isAuthenticate: false,
+      method: HTTPMethodType.post,
+      bodyParameters: {"phone": phone},
+    );
+  }
+
+  static Endpoint<User> verifyAccount({required String code, required String phone}) {
+    return Endpoint<User>(
+      path: "api/v1/verifyAccount",
+      isAuthenticate: false,
+      method: HTTPMethodType.put,
+      bodyParameters: {"verifycode": code, "phone": phone},
+    );
+  }
+
+  static Endpoint<User> setNewPasswordAfterRest({required String newPassword, required String phone}) {
+    return Endpoint<User>(
+      path: "api/v1/reset-password-phone",
+      isAuthenticate: false,
+      method: HTTPMethodType.post,
+      bodyParameters: {"newPassword": newPassword, "phone": phone},
+    );
+  }
 }

@@ -14,10 +14,10 @@ abstract class BaseViewModelProtocol {
 
 class BaseViewModel extends ChangeNotifier implements BaseViewModelProtocol {
   
-  // محاكاة لـ apiManager في سويفت
+
   late final DataTransferService apiManager;
 
-  // استخدام StreamController لمحاكاة PublishSubject في RxSwift
+
   @override
   final StreamController<BaseError> alertMessage = StreamController<BaseError>.broadcast();
   
@@ -25,10 +25,10 @@ class BaseViewModel extends ChangeNotifier implements BaseViewModelProtocol {
   final StreamController<BaseLoading> isLoaderHidden = StreamController<BaseLoading>.broadcast();
 
   BaseViewModel() {
-    // إعداد الـ Core Network (المحرك)
+
     final dio = Dio();
     final networkService = DefaultNetworkService(dio);
-    // استخدام الـ config الافتراضي
+
     final config = ApiDataNetworkConfig(baseURL: ApiDataNetworkConfig.resource);
     
     apiManager = DefaultDataTransferService(networkService, config);
@@ -41,7 +41,7 @@ class BaseViewModel extends ChangeNotifier implements BaseViewModelProtocol {
     super.dispose();
   }
 
-  // معالجة الأخطاء كما في سويفت
+
   void handleError(BaseError error) {
     isLoaderHidden.add(BaseLoading.hide);
     alertMessage.add(error);

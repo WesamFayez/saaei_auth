@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'auth/login/screen/login_screen.dart';
 
 void main() {
@@ -13,6 +14,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Saaei Auth',
       debugShowCheckedModeBanner: false,
+
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ar', 'SA'), //
+      ],
+      locale: const Locale('ar', 'SA'),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2D7D76)),
         useMaterial3: true,

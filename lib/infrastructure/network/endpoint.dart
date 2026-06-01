@@ -22,7 +22,7 @@ abstract class Requestable {
 }
 
 abstract class ResponseRequestable<T> extends Requestable {
-  // In Flutter/Dart we usually handle decoding in the service or via a factory
+
 }
 
 class Endpoint<T> implements ResponseRequestable<T> {

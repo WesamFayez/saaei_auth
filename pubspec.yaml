@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^1.0.8
   dio: ^5.4.1
@@ -28,6 +30,10 @@ flutter:
     - assets/logoNav.png
     - assets/authBG.png
     - assets/logo.png
+    - assets/back-icon-white.png
+    - assets/notification.png
+    - assets/message.png
+    - assets/user-nav.png
 
   fonts:
     - family: Cairo
