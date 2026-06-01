@@ -14,7 +14,7 @@ class LoginCubit extends Cubit<LoginState> {
     final endpoint = APIEndpoints.login(
       phone: "+966$phone",
       password: password,
-      fcmToken: "fcm_token",
+      fcmToken: "",
       udid: "udid",
     );
 
