@@ -1,0 +1,13 @@
+{
+  "@@locale": "en",
+  "login": "Login",
+  "register": "Register",
+  "phone": "Phone Number",
+  "password": "Password",
+  "forgotPassword": "Forgot Password?",
+  "name": "Name",
+  "acceptTerms": "Terms and Conditions",
+  "sendCode": "Send Code",
+  "verifyCode": "Verify",
+  "savePassword": "Save New Password"
+}

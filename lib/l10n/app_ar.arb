@@ -1,0 +1,13 @@
+{
+  "@@locale": "ar",
+  "login": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "phone": "رقم الجوال",
+  "password": "كلمة المرور",
+  "forgotPassword": "نسيت كلمة المرور ؟",
+  "name": "الإسم",
+  "acceptTerms": "للشروط والأحكام",
+  "sendCode": "ارسل الرمز",
+  "verifyCode": "تحقق",
+  "savePassword": "حفظ كلمة المرور الجديدة"
+}

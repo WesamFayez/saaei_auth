@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'auth/login/screen/login_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'l10n/app_localizations.dart';
+import 'core/theme/app_theme.dart';
+import 'core/routing/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,25 +14,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Saaei Auth',
-      debugShowCheckedModeBanner: false,
-
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('ar', 'SA'), //
-      ],
-      locale: const Locale('ar', 'SA'),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2D7D76)),
-        useMaterial3: true,
-        fontFamily: 'Cairo',
-      ),
-      home: const LoginScreen(),
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          title: 'Saaei Auth',
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.router,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          locale: const Locale('ar'),
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
+          themeMode: ThemeMode.light,
+        );
+      },
     );
   }
 }

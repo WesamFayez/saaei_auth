@@ -22,6 +22,11 @@ class NetworkConnectionError extends BaseError {
 class ServerError extends BaseError {
   final int statusCode;
   ServerError({required this.statusCode, super.title, super.message});
+
+  bool get isUnauthorized => statusCode == 401;
+  bool get isForbidden => statusCode == 403;
+  bool get isNotFound => statusCode == 404;
+  bool get isServerDown => statusCode >= 500;
 }
 
 class OtherError extends BaseError {
