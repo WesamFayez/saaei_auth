@@ -1,10 +1,10 @@
 import 'package:go_router/go_router.dart';
-import '../../features/auth/login/screen/login_screen.dart';
-import '../../features/auth/register/screen/register_screen.dart';
-import '../../features/auth/forgot_password/screen/forgot_password_screen.dart';
-import '../../features/auth/verification/screen/verification_screen.dart';
-import '../../features/auth/reset_password/screen/reset_password_screen.dart';
-import '../../features/home/screens/main_screen.dart';
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/register_screen.dart';
+import '../../features/auth/presentation/screens/forgot_password_screen.dart';
+import '../../features/auth/presentation/screens/verification_screen.dart';
+import '../../features/auth/presentation/screens/reset_password_screen.dart';
+import '../../features/home/presentation/screens/main_screen.dart';
 
 class AppRouter {
   static const login = '/login';

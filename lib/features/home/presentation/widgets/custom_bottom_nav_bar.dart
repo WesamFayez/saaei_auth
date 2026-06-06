@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:saaei_auth/core/theme/app_colors.dart';
-import 'package:saaei_auth/core/theme/app_theme.dart';
-import 'package:saaei_auth/core/utils/app_strings.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_theme.dart';
+import '../../../../core/utils/app_strings.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int currentIndex;

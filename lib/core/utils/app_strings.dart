@@ -1,6 +1,7 @@
 class AppStrings {
   AppStrings._();
 
+  // Auth Strings
   static const String phoneForVerification = 'رقم الجوال لاستقبال رمز التحقق';
   static const String sendCode = 'ارسل الرمز';
   static const String error = 'خطأ';
@@ -40,4 +41,23 @@ class AppStrings {
   static const String sendSignUpError = 'فشل إنشاء الحساب، يرجى المحاولة مرة أخرى';
   static const String sendResetPasswordError = 'فشل تغيير كلمة المرور، يرجى المحاولة مرة أخرى';
   static const String changePasswordSuccesfully = 'تم تغيير كلمة المرور بنجاح';
+
+  // Home Strings
+  static const String projects = 'المشاريع';
+  static const String askSaaei = 'إسأل ساعي';
+  static const String requestProperty = 'اطلب عقار';
+  static const String myProperties = 'عقاراتي';
+  static const String more = 'المزيد';
+  
+  // More Screen Strings
+  static const String myRequests = 'طلباتي';
+  static const String favorites = 'المفضلة';
+  static const String realEstateNews = 'أخبار العقار';
+  static const String settings = 'الإعدادات';
+  static const String faq = 'الأسئلة الشائعة';
+  static const String shareApp = 'مشاركة التطبيق';
+  static const String upgradeToBroker = 'حول حسابي لوسيط عقاري';
+  static const String intellectualProperty = 'الملكية الفكرية';
+  static const String privacyPolicy = 'سياسة الخصوصية';
+  static const String ourChannels = 'قنواتنا';
 }
