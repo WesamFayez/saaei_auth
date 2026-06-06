@@ -17,7 +17,7 @@ import '../../features/auth/presentation/bloc/reset_password_cubit.dart';
 final sl = GetIt.instance;
 
 Future<void> init() async {
-  // Cubits (Factories)
+  // Cubits
   sl.registerFactory(() => LoginCubit(sl()));
   sl.registerFactory(() => RegisterCubit(sl()));
   sl.registerFactory(() => ForgotPasswordCubit(sl()));
